@@ -1,3 +1,11 @@
+/**
+ * Point.java
+ *
+ * <p>Purdue University -- CS18000 -- Fall 2024</p>
+ *
+ * @author Ian Pang
+ * @version Oct 14, 2024
+ */
 public class Point {
     private double x;
     private double y;

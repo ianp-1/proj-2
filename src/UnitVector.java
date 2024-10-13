@@ -1,3 +1,12 @@
+/**
+ * UnitVector.java
+ *
+ * <p>Purdue University -- CS18000 -- Fall 2024</p>
+ *
+ * @author Ian Pang
+ * @version Oct 14, 2024
+ */
+
 public class UnitVector {
     private double i;
     private double j;
@@ -22,19 +31,19 @@ public class UnitVector {
     }
 
     public UnitVector(Point start, Point end) {
-        double i = end.getX() - start.getX();
-        double j = end.getY() - start.getY();
-        double k = end.getZ() - start.getZ();
+        double newI = end.getX() - start.getX();
+        double newJ = end.getY() - start.getY();
+        double newK = end.getZ() - start.getZ();
 
-        double magnitude = Math.sqrt(i * i + j * j + k * k);
+        double magnitude = Math.sqrt(newI * newI + newJ * newJ + newK * newK);
         if (Math.abs(magnitude - 1.0) > 0.0001) {
-            this.i = i / magnitude;
-            this.j = j / magnitude;
-            this.k = k / magnitude;
+            this.i = newI / magnitude;
+            this.j = newJ / magnitude;
+            this.k = newK / magnitude;
         } else {
-            this.i = i;
-            this.j = j;
-            this.k = k;
+            this.i = newI;
+            this.j = newJ;
+            this.k = newK;
         }
         if (magnitude == 0) {
             this.i = 0.0;

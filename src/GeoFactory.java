@@ -141,7 +141,7 @@ public class GeoFactory {
         System.out.println(String.format(FACE_END, f));
         return f;
     }
-
+    
     private static Cube cubeMenu(Scanner s) {
         System.out.println(CUBE);
         Face one = faceMenu(s);

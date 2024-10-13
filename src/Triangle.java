@@ -1,3 +1,12 @@
+/**
+ * Triangle.java
+ *
+ * <p>Purdue University -- CS18000 -- Fall 2024</p>
+ *
+ * @author Ian Pang
+ * @version Oct 14, 2024
+ */
+
 public class Triangle {
     private Point vertexA;
     private Point vertexB;
@@ -49,7 +58,11 @@ public class Triangle {
     }
 
     public Point[] getVertices() {
-        return new Point[]{this.vertexA, this.vertexB, this.vertexC};
+        Point[] vertices = new Point[3];
+        vertices[0] = this.vertexA;
+        vertices[1] = this.vertexB;
+        vertices[2] = this.vertexC;
+        return vertices;
     }
 
     public boolean compareWith(Triangle triangle) {
@@ -64,7 +77,8 @@ public class Triangle {
                 surfaceNormal.toString().equals("<InvalidUnitVector>")) {
             return "[InvalidTriangle]";
         }
-        return String.format("[A%s; B%s; C%s; N%s]", vertexA.toString(), vertexB.toString(), vertexC.toString(), surfaceNormal.toString());
+        return String.format("[A%s; B%s; C%s; N%s]", vertexA.toString(), vertexB.toString(), vertexC.toString(),
+                surfaceNormal.toString());
     }
 
 
